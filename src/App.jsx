@@ -1,11 +1,11 @@
 import { EDUCATION, LANGUAGES, PROJECTS, SUMMARY, TECHNICAL_SKILLS } from './constants';
 import {
-    AboutSection,
-    ContactSection,
-    DetailsSection,
-    ProfileHeader,
-    ProjectsSection,
-    SkillsSection,
+  AboutSection,
+  ContactSection,
+  DetailsSection,
+  ProfileHeader,
+  ProjectsSection,
+  SkillsSection,
 } from './components';
 
 const profile = {

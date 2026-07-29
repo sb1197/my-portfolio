@@ -6,13 +6,13 @@ export const EDUCATION = [
     degree: 'Bachelor of Engineering',
     institution: 'Bharati Vidyapeeth College of Engineering for Women, Pune',
     period: '2015 - 2018',
-    details: "Scored 76%",
+    details: 'Scored 76%',
   },
   {
     degree: 'Diploma in Engineering',
     institution: 'Government Polytechnic, Amravati',
     period: '2012 - 2015',
-    details: "Scored 75%",
+    details: 'Scored 75%',
   },
   {
     degree: 'SSC',
@@ -39,7 +39,17 @@ export const PROJECTS = [
     period: 'April 2019 - June 2025',
     description:
       'Built and maintained a decision intelligence platform used for predictive reporting and business decision-making across organizational data.',
-    technologies: ['React.js', 'Node.js', 'Redux', 'REST API', 'MySQL', 'DynamoDB', 'PostgreSQL', 'K8s', 'AWS'],
+    technologies: [
+      'React.js',
+      'Node.js',
+      'Redux',
+      'REST API',
+      'MySQL',
+      'DynamoDB',
+      'PostgreSQL',
+      'K8s',
+      'AWS',
+    ],
   },
   {
     name: 'BridgeLabz Pvt Ltd',
@@ -54,11 +64,35 @@ export const PROJECTS = [
 export const TECHNICAL_SKILLS = [
   {
     title: 'Technology & Frameworks',
-    items: ['JavaScript', 'TypeScript', 'React.js', 'Node.js', 'Redux', 'Webpack', 'Vite', 'HTML5', 'CSS3', 'SASS', 'Plotly Dash', 'Python', 'Fast API'],
+    items: [
+      'JavaScript',
+      'TypeScript',
+      'React.js',
+      'Node.js',
+      'Redux',
+      'Webpack',
+      'Vite',
+      'HTML5',
+      'CSS3',
+      'SASS',
+      'Plotly Dash',
+      'Python',
+      'Fast API',
+    ],
   },
   {
     title: 'Tools & Practices',
-    items: ['Storybook', 'Chromatic', 'Jest', 'Cypress Testing Library', 'JIRA', 'Confluence', 'Git', 'VS Code', 'Atom'],
+    items: [
+      'Storybook',
+      'Chromatic',
+      'Jest',
+      'Cypress Testing Library',
+      'JIRA',
+      'Confluence',
+      'Git',
+      'VS Code',
+      'Atom',
+    ],
   },
   {
     title: 'Databases',
@@ -66,6 +100,12 @@ export const TECHNICAL_SKILLS = [
   },
   {
     title: 'Application Areas',
-    items: ['Web Applications', 'Decision Intelligence Platform', 'Microservice Architecture', 'Design Systems', 'AWS Services'],
+    items: [
+      'Web Applications',
+      'Decision Intelligence Platform',
+      'Microservice Architecture',
+      'Design Systems',
+      'AWS Services',
+    ],
   },
 ];
