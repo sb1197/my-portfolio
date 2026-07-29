@@ -23,6 +23,11 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
