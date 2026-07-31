@@ -7,10 +7,11 @@ import {
   ProjectsSection,
   SkillsSection,
 } from './components';
+import profileImage from './images/self.jpg';
 
 const profile = {
   name: 'Shweta Bochare',
-  role: 'Frontend Developer',
+  role: 'Senior Software Engineer at Peak - A UiPath Company',
   location: 'Pune, Maharashtra, India',
   summary: SUMMARY,
   education: EDUCATION,
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="page-shell">
       <main className="profile-card">
-        <ProfileHeader name={profile.name} role={profile.role} imageSrc="src/images/self.jpg" />
+        <ProfileHeader name={profile.name} role={profile.role} imageSrc={profileImage} />
 
         <AboutSection summary={profile.summary} />
 

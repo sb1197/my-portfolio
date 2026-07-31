@@ -1,5 +1,5 @@
 export const SUMMARY =
-  "Frontend engineer with 6+ years of experience building responsive, high-quality web applications with JavaScript, TypeScript, React, Node.js, and Python-based web experiences. I have delivered customer-facing UI's, worked with design systems and microservice architectures, and contributed to scalable product experiences across AI-driven applications and enterprise platforms.";
+  "Senior Software Engineer with 6+ years of experience building responsive, high-quality web applications with JavaScript, TypeScript, React, Node.js, and Python-based web experiences. I have delivered customer-facing UI's, worked with design systems and microservice architectures, and contributed to scalable product experiences across AI-driven applications and enterprise platforms.";
 
 export const EDUCATION = [
   {
