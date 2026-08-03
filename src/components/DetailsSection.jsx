@@ -1,6 +1,6 @@
 import SectionShell from './SectionShell';
 
-function DetailsSection({ education, languages }) {
+function DetailsSection({ education, languages, hobbies }) {
   return (
     <SectionShell title="" className="details-grid">
       <article>
@@ -22,6 +22,16 @@ function DetailsSection({ education, languages }) {
           {languages.map((language) => (
             <li key={language}>
               <strong>{language}</strong>
+            </li>
+          ))}
+        </ul>
+      </article>
+      <article>
+        <h3>Hobbies</h3>
+        <ul className="detail-list">
+          {hobbies.map((hobby) => (
+            <li key={hobby}>
+              <strong>{hobby}</strong>
             </li>
           ))}
         </ul>

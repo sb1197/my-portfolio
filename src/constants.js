@@ -23,6 +23,7 @@ export const EDUCATION = [
 ];
 
 export const LANGUAGES = ['English', 'Marathi', 'Hindi'];
+export const HOBBIES = ['Reading', 'Traveling', 'Listening Podcasts'];
 
 export const PROJECTS = [
   {
