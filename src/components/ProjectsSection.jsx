@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import SectionShell from './SectionShell';
 
 function ProjectsSection({ projects }) {
