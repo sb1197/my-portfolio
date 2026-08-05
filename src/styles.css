@@ -87,9 +87,10 @@ h5 {
 }
 
 .avatar {
-  width: min(140px, 30vw);
+  width: min(180px, 30vw);
+  height: min(180px, 30vw);
   aspect-ratio: 1;
-  display: grid;
+  display: block;
   place-items: center;
   border-radius: 28px;
   padding: 4px;
@@ -98,8 +99,10 @@ h5 {
 }
 
 .avatar img {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 24px;
   display: block;
@@ -163,12 +166,31 @@ h5 {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
 .skill-group h4,
 .project-heading h4 {
-  margin: 0 0 0.7rem;
   color: #f6f8ff;
+}
+
+.project-summary {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-toggle {
+  justify-self: end;
+  align-self: center;
+  color: #7aa5ff;
+  font-size: 0.95rem;
 }
 
 .tag-list {
@@ -195,6 +217,12 @@ h5 {
 }
 
 .project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info {
   margin-bottom: 0.6rem;
 }
 
@@ -241,5 +269,6 @@ h5 {
 
   .avatar {
     width: min(120px, 42vw);
+    height: min(120px, 42vw);
   }
 }
