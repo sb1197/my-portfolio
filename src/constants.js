@@ -22,7 +22,8 @@ export const EDUCATION = [
   },
 ];
 
-export const LANGUAGES = ['English', 'Marathi', 'Hindi'];
+export const LANGUAGES = ['English (Proficient)', 'Marathi (Native)', 'Hindi (Proficient)'];
+export const HOBBIES = ['Reading', 'Traveling', 'Listening Podcasts'];
 
 export const PROJECTS = [
   {
