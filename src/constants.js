@@ -30,16 +30,26 @@ export const PROJECTS = [
     name: 'Peak - A UiPath Company',
     role: 'Senior Software Engineer',
     period: 'June 2025 - Present',
-    description:
-      'Contributing to AI-driven enterprise experiences that help customers adopt next-generation agentic applications with UiPath and Peak.',
+    description: [
+      'Led frontend architecture and framework modernization initiatives, including a React-to-Dash migration strategy to enable scalable Python-based web application development.',
+      'Designed and delivered key customer-facing applications and features, including B2B Pricing (List Pricing & Quote Pricing), BidAI, and the Recommender System for Coles and Speedy, taking ownership from design through delivery.',
+      'Established and owned a reusable UI component library, driving component standardization, React-to-Dash compatibility, and consistent user experiences across multiple applications.',
+      'Served as a technical lead across projects features and packaged library of UI components, making architectural and design decisions, collaborating with stakeholders and designers, and promoting engineering best practices for maintainability and scalability.',
+      'Managed dependency upgrades and platform improvements, reducing technical debt, improving application stability, and ensuring long-term sustainability of frontend solutions.',
+    ],
     technologies: ['Python', 'Plotly Dash', 'Fast API', 'Swagger OpenAPI'],
   },
   {
     name: 'Peak AI',
     role: 'Software Engineer',
     period: 'April 2019 - June 2025',
-    description:
-      'Built and maintained a decision intelligence platform used for predictive reporting and business decision-making across organizational data.',
+    description: [
+      'Delivered end-to-end solutions across frontend, backend, data migration, and production support, including feature development, backfill operations, and critical issue resolution.',
+      'Architected and maintained a scalable, reusable component library with theming support and Storybook-based documentation, driving UI consistency and accelerating development across teams.',
+      'Implemented a platform-native SQL Explorer experience, providing advanced data querying and exploration capabilities comparable to PostgreSQL administration tools.',
+      'Built deployment specifications and configuration blocks for applications onboarding and automated deployments via CI/CD pipelines, reducing manual operational overhead.',
+      'Leveraged Swagger/OpenAPI-driven integrations to develop and maintain deployment-related APIs, improving automation, standardization, and platform extensibility.',
+    ],
     technologies: [
       'React.js',
       'Node.js',
@@ -56,8 +66,10 @@ export const PROJECTS = [
     name: 'BridgeLabz Pvt Ltd',
     role: 'Fellowship Engineer',
     period: '2018 - 2019',
-    description:
-      'Single-handedly developed a full-stack notes application with responsive design, card-based UI, search, and navigation features.',
+    description: [
+      'Single handedly developed fundooNotes (similar to Google Notes) application using NodeJs, ReactJs, AWS Lambda, DynamoDB, API Gateway as a Full-stack Development with Material Responsive Design, Card Based UI, Navigation Panel, Search & Show notes in list & grid view etc.',
+      'Gained understanding of AWS services including Lambda, DynamoDB, S3, API Gateway, SES, ElasticCache and deployed the application using the Serverless framework.',
+    ],
     technologies: ['Node.js', 'React.js', 'AWS Lambda', 'DynamoDB', 'API Gateway'],
   },
 ];
@@ -73,12 +85,15 @@ export const TECHNICAL_SKILLS = [
       'Redux',
       'Webpack',
       'Vite',
-      'HTML5',
-      'CSS3',
+      'HTML',
+      'CSS',
       'SASS',
       'Plotly Dash',
       'Python',
       'Fast API',
+      'REST API',
+      'Swagger OpenAPI',
+      'Material UI',
     ],
   },
   {
