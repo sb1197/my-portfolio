@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function NavHeader() {
   const [theme, setTheme] = useState(() => {
@@ -15,6 +15,8 @@ export default function NavHeader() {
   });
 
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
 
   useEffect(() => {
     document.documentElement.classList.toggle('light-theme', theme === 'light');
@@ -24,6 +26,24 @@ export default function NavHeader() {
       console.warn('Unable to persist theme preference', e);
     }
   }, [theme]);
+
+  useEffect(() => {
+    // Hide nav when scrolling down, show when scrolling up or at top
+    const onScroll = () => {
+      const currentY = window.scrollY || window.pageYOffset;
+      if (currentY <= 0) {
+        setHidden(false);
+      } else if (currentY > lastY.current && currentY > 80) {
+        setHidden(true);
+      } else if (currentY < lastY.current) {
+        setHidden(false);
+      }
+      lastY.current = currentY;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const links = [
     ['Home', '#home'],
@@ -36,7 +56,7 @@ export default function NavHeader() {
   ];
 
   return (
-    <div className="nav-header">
+    <div className={`nav-header ${hidden ? 'hidden' : ''}`}>
       <nav>
         <button
           className="theme-toggle"

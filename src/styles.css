@@ -53,12 +53,28 @@ a:hover {
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
 }
 
-/* Navigation header (top-right) */
+/* Navigation header (fixed top, hide on scroll) */
 .nav-header {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.6rem 1.25rem;
+  z-index: 60;
+  transition:
+    transform 260ms ease,
+    opacity 260ms ease;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-header.hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-header nav {
@@ -410,7 +426,7 @@ h5 {
   color: #071127;
 }
 
-.light-theme .profile-card {
+.light-theme .page-shell {
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(3, 10, 30, 0.05);
   box-shadow: 0 10px 30px rgba(3, 10, 30, 0.06);

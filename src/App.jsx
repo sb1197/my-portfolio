@@ -34,7 +34,7 @@ const profile = {
 function App() {
   return (
     <div className="page-shell">
-      <main className="profile-card">
+      <main>
         <NavHeader />
         <ProfileHeader name={profile.name} role={profile.role} />
 
