@@ -1,21 +1,38 @@
 # Portfolio
 
-# Profile Introduction
+A lightweight React portfolio built with Vite that showcases a personal profile, skills, projects, and contact details. The app is intentionally minimal and focused on a clean, responsive layout with accessible components.
 
-A React app created with Vite to showcase a polished profile introduction page.
+## Features
 
-## Setup
+- Responsive profile header with avatar and summary
+- Sections for About, Skills, Projects, and Contact
+- Collapsible project cards with technology tags
+- Prettier + ESLint integration and Git hooks for consistent formatting
 
-Install dependencies:
+## Local development
+
+1. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start development server:
+2. Run the dev server
 
 ```bash
 npm run dev
+```
+
+3. Format codebase
+
+```bash
+npm run format
+```
+
+4. Run lint and formatting checks
+
+```bash
+npm run check
 ```
 
 Build for production:
@@ -24,24 +41,20 @@ Build for production:
 npm run build
 ```
 
-Format files:
+## Contributing
 
-```bash
-npm run format
-```
+Contributions are welcome. Before opening a PR, make sure your changes are formatted and linted — the repository includes pre-commit hooks that automatically run Prettier on staged files.
 
-Run lint and formatting checks:
+- The GitHub Actions workflow `.github/workflows/ci.yml` runs on pushes and pull requests and performs:
+	- dependency install (`npm ci`),
+	- ESLint checks (`npm run lint`),
+	- Prettier checks (`npm run format:check`), and
+	- a production build (`npm run build`).
 
-```bash
-npm run check
-```
+- To avoid CI failures, run `npm run format` and `npm run lint` locally before pushing.
 
-## CI
+If you'd like me to add contribution guidelines, testing, or more CI checks (type checking, unit tests), open an issue or a PR and I can help add them.
 
-A GitHub Actions workflow is configured in `.github/workflows/ci.yml`.
-It installs dependencies, runs ESLint, performs Prettier formatting checks, and builds the app.
+---
 
-## Deployment
-
-This project includes a `vercel.json` configuration file for deployment on Vercel.
-Connect your GitHub repository to Vercel and deploy the `main` branch.
+License: MIT
