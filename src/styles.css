@@ -15,6 +15,11 @@ body,
   min-height: 100%;
 }
 
+/* Smooth scrolling for in-page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background:
@@ -321,6 +326,16 @@ h5 {
 .detail-list span {
   color: #cbd6f6;
   font-size: 0.95rem;
+}
+
+.video-wrapper {
+  display: grid;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.nav-icon {
+  margin-right: 0.45rem;
 }
 
 .summary-list {

@@ -7,6 +7,7 @@ import {
   NavHeader,
   ProjectsSection,
   SkillsSection,
+  VideoSection,
 } from './components';
 import profileImage from './images/self.jpg';
 
@@ -44,6 +45,8 @@ function App() {
         <SkillsSection skillGroups={profile.technicalSkills} />
 
         <ProjectsSection projects={profile.projects} />
+
+        <VideoSection src="/intro.mp4" />
 
         <DetailsSection
           education={profile.education}

@@ -30,8 +30,8 @@ export default function NavHeader() {
     ['About', '#about'],
     ['Projects', '#projects'],
     ['Journey', '#journey'],
-    ['Blog', '#blog'],
-    ['Resume', '#resume'],
+    ['Blog', '/blog.html', '✍️'],
+    ['Resume', '/resume.html', '📄'],
     ['Contact', '#contact'],
   ];
 
@@ -56,10 +56,13 @@ export default function NavHeader() {
         </button>
 
         <ul className={`nav-links ${open ? 'open' : ''}`}>
-          {links.map(([label, href]) => (
+          {links.map(([label, href, icon]) => (
             <li key={href}>
               <a href={href} onClick={() => setOpen(false)}>
-                {label}
+                <span className="nav-icon" aria-hidden>
+                  {icon}
+                </span>
+                <span className="nav-label">{label}</span>
               </a>
             </li>
           ))}

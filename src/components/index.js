@@ -5,6 +5,7 @@ import ProfileHeader from './ProfileHeader';
 import NavHeader from './NavHeader';
 import ProjectsSection from './ProjectsSection';
 import SkillsSection from './SkillsSection';
+import VideoSection from './VideoSection';
 
 export {
   AboutSection,
@@ -14,4 +15,5 @@ export {
   NavHeader,
   ProjectsSection,
   SkillsSection,
+  VideoSection,
 };
