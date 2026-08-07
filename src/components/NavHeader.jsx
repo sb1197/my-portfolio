@@ -58,6 +58,7 @@ export default function NavHeader() {
   return (
     <div className={`nav-header ${hidden ? 'hidden' : ''}`}>
       <nav>
+        <div className="nav-logo">Shweta</div>
         <button
           className="theme-toggle"
           aria-label="Toggle theme"

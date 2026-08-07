@@ -3,6 +3,7 @@
   font-family: Inter, system-ui, sans-serif;
   background: #0b1220;
   color: #f7f7ff;
+  --nav-offset: 68px;
 }
 
 * {
@@ -38,10 +39,10 @@ a:hover {
 
 .page-shell {
   min-height: 100vh;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: calc(2rem + var(--nav-height)) 2rem 2rem;
 }
 
 .profile-card {
@@ -54,15 +55,26 @@ a:hover {
 }
 
 /* Navigation header (fixed top, hide on scroll) */
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0b1220;
+  color: #f7f7ff;
+  --nav-offset: 68px;
+  --nav-height: 68px;
+}
+
 .nav-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.6rem 1.25rem;
   z-index: 60;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25rem;
   transition:
     transform 260ms ease,
     opacity 260ms ease;
@@ -80,7 +92,16 @@ a:hover {
 .nav-header nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: min(100%, 940px);
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  color: inherit;
 }
 
 .nav-header .theme-toggle,
@@ -131,6 +152,12 @@ a:hover {
     position: static !important;
     background: transparent;
     flex-direction: row;
+  }
+  .nav-links.open {
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
   }
 }
 
@@ -213,6 +240,7 @@ h5 {
 
 .section {
   margin-top: 2rem;
+  scroll-margin-top: calc(var(--nav-offset) + 8px);
 }
 
 .link-list {
