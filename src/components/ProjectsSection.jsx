@@ -18,7 +18,7 @@ function ProjectsSection({ projects }) {
   };
 
   return (
-    <SectionShell title="Projects">
+    <SectionShell id="projects" title="Projects">
       <div className="project-list">
         {projects.map((project) => {
           const projectKey = `${project.name}-${project.period}`;

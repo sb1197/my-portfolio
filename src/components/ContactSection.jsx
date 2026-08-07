@@ -1,6 +1,6 @@
 function ContactSection({ location, contact }) {
   return (
-    <section className="section details-grid">
+    <section id="contact" className="section details-grid">
       <article>
         <h3>Location</h3>
         <p>{location}</p>

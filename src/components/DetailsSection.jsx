@@ -3,7 +3,7 @@ import SectionShell from './SectionShell';
 function DetailsSection({ education, languages, hobbies }) {
   return (
     <>
-      <SectionShell title="" className="details-grid">
+      <SectionShell id="journey" title="" className="details-grid">
         <article>
           <h3>Education</h3>
           <ul className="detail-list">

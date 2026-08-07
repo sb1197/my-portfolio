@@ -1,6 +1,6 @@
 function ProfileHeader({ name, role, imageSrc }) {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="typewriter">
         <h1>Hi, I&apos;m {name}.</h1>
         <p className="subtitle">{role}</p>

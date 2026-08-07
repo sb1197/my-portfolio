@@ -4,6 +4,7 @@ import {
   ContactSection,
   DetailsSection,
   ProfileHeader,
+  NavHeader,
   ProjectsSection,
   SkillsSection,
 } from './components';
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="page-shell">
       <main className="profile-card">
+        <NavHeader />
         <ProfileHeader name={profile.name} role={profile.role} imageSrc={profileImage} />
 
         <AboutSection summary={profile.summary} />
