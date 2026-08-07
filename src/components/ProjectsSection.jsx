@@ -44,7 +44,17 @@ function ProjectsSection({ projects }) {
                     <p className="project-role">{project.role}</p>
                     <p className="project-period">{project.period}</p>
                   </div>
-                  <p>{project.description}</p>
+                  {Array.isArray(project.description) ? (
+                    <ul className="summary-list">
+                      {project.description.map((line, i) => (
+                        <li key={i}>
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{project.description}</p>
+                  )}
                 </div>
               )}
               <ul className="tag-list">

@@ -20,11 +20,11 @@ function DetailsSection({ education, languages, hobbies }) {
       </SectionShell>
       <SectionShell title="" className="details-grid">
         <article>
-          <h3>Languages Spoken</h3>
+          <h3>Languages</h3>
           <ul className="detail-list">
             {languages.map((language) => (
               <li key={language}>
-                <strong>{language}</strong>
+                <span>{language}</span>
               </li>
             ))}
           </ul>
@@ -34,7 +34,7 @@ function DetailsSection({ education, languages, hobbies }) {
           <ul className="detail-list">
             {hobbies.map((hobby) => (
               <li key={hobby}>
-                <strong>{hobby}</strong>
+                <span>{hobby}</span>
               </li>
             ))}
           </ul>

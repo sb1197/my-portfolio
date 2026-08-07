@@ -258,6 +258,20 @@ h5 {
   font-size: 0.95rem;
 }
 
+.summary-list {
+  margin: 1rem 0 0;
+  padding: 0 1rem 1rem;
+  display: block;
+}
+
+.summary-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 0.8rem;
+  display: list-item;
+}
+
 @media (max-width: 720px) {
   .profile-card {
     padding: 1.6rem;
@@ -270,5 +284,42 @@ h5 {
   .avatar {
     width: min(120px, 42vw);
     height: min(120px, 42vw);
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #7aa5ff;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  width: max-content;
+  /* Start with a width of 0 to create the typing effect */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #7aa5ff;
   }
 }
