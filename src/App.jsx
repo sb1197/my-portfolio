@@ -36,9 +36,9 @@ function App() {
     <div className="page-shell">
       <main className="profile-card">
         <NavHeader />
-        <ProfileHeader name={profile.name} role={profile.role} imageSrc={profileImage} />
+        <ProfileHeader name={profile.name} role={profile.role} />
 
-        <AboutSection summary={profile.summary} />
+        <AboutSection summary={profile.summary} imageSrc={profileImage} />
 
         <ContactSection location={profile.location} contact={profile.contact} />
 

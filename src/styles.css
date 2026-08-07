@@ -120,9 +120,26 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 1.6rem;
   align-items: center;
+}
+
+/* About two-column layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about-avatar.avatar {
+  width: min(140px, 24vw);
+  height: min(140px, 24vw);
+}
+
+.about-summary p {
+  margin: 0;
 }
 
 .eyebrow {
@@ -358,6 +375,10 @@ h5 {
   }
 
   .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
     grid-template-columns: 1fr;
   }
 

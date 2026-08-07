@@ -1,12 +1,9 @@
-function ProfileHeader({ name, role, imageSrc }) {
+function ProfileHeader({ name, role }) {
   return (
     <section id="home" className="hero">
       <div className="typewriter">
         <h1>Hi, I&apos;m {name}.</h1>
         <p className="subtitle">{role}</p>
-      </div>
-      <div className="avatar" aria-hidden="true">
-        <img src={imageSrc} alt={`${name} portrait`} />
       </div>
     </section>
   );

@@ -1,9 +1,16 @@
 import SectionShell from './SectionShell';
 
-function AboutSection({ summary }) {
+function AboutSection({ summary, imageSrc }) {
   return (
     <SectionShell id="about" title="About Me">
-      <p>{summary}</p>
+      <div className="about-grid">
+        <div className="about-avatar avatar" aria-hidden>
+          <img src={imageSrc} alt="Profile" />
+        </div>
+        <div className="about-summary">
+          <p>{summary}</p>
+        </div>
+      </div>
     </SectionShell>
   );
 }
