@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import '../styles/NavHeader.css';
+import imageSrc from '../images/logo.png';
 
 export default function NavHeader() {
   const [theme, setTheme] = useState(() => {
@@ -50,44 +52,50 @@ export default function NavHeader() {
     ['About', '#about'],
     ['Projects', '#projects'],
     ['Journey', '#journey'],
-    ['Blog', '/blog.html', '✍️'],
-    ['Resume', '/resume.html', '📄'],
+    ['Blog', '/blog.html'],
+    ['Resume', '/resume.html'],
     ['Contact', '#contact'],
   ];
 
   return (
     <div className={`nav-header ${hidden ? 'hidden' : ''}`}>
+      <div onClick={() => setOpen(false)} />
       <nav>
-        <div className="nav-logo">Shweta</div>
-        <button
-          className="theme-toggle"
-          aria-label="Toggle theme"
-          onClick={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
-        >
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <img src={imageSrc} alt="logo" height={40} />
+          <div className="nav-logo">Shweta</div>
+        </div>
 
-        <button
-          className="menu-toggle"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((s) => !s)}
-        >
-          ☰
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button
+            className="menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((s) => !s)}
+          >
+            ☰
+          </button>
 
-        <ul className={`nav-links ${open ? 'open' : ''}`}>
-          {links.map(([label, href, icon]) => (
-            <li key={href}>
-              <a href={href} onClick={() => setOpen(false)}>
-                <span className="nav-icon" aria-hidden>
-                  {icon}
-                </span>
-                <span className="nav-label">{label}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ul className={`nav-links ${open ? 'open' : ''}`}>
+            {links.map(([label, href, icon]) => (
+              <li key={href}>
+                <a href={href} onClick={() => setOpen(false)}>
+                  <span className="nav-icon" aria-hidden>
+                    {icon}
+                  </span>
+                  <span className="nav-label">{label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button
+            className="theme-toggle"
+            aria-label="Toggle theme"
+            onClick={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        </div>
       </nav>
     </div>
   );

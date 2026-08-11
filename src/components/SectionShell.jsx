@@ -1,3 +1,5 @@
+import '../styles/SectionShell.css';
+
 function SectionShell({ title, titleLevel = 'h3', children, className = '', id }) {
   const Heading = titleLevel;
 

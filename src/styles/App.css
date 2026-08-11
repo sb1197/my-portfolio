@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0b1220;
+  color: #f7f7ff;
+  --nav-offset: 68px;
+  --nav-height: 68px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(92, 152, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(79, 236, 188, 0.16), transparent 16%), #0b1220;
+}
+
+a {
+  color: #74b1ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: calc(2rem + var(--nav-height)) 2rem 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.05;
+}
+
+h5 {
+  margin-top: 0;
+}
+
+.light-theme body {
+  background:
+    linear-gradient(circle at top left, rgba(35, 80, 180, 0.05), transparent 28%),
+    rgba(250, 250, 252, 1);
+  color: #071127;
+}
+
+.light-theme .page-shell {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(3, 10, 30, 0.05);
+  box-shadow: 0 10px 30px rgba(3, 10, 30, 0.06);
+  color: #071127;
+}
+
+.light-theme a {
+  color: #0b67f3;
+}
+
+.light-theme .skill-group h4,
+.light-theme .project-heading h4,
+.light-theme .detail-list strong {
+  color: #071127;
+}
+
+.light-theme .subtitle,
+.light-theme .detail-list span,
+.light-theme .tag-list li {
+  color: #334155;
+}

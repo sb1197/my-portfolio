@@ -1,0 +1,24 @@
+.detail-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.detail-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-list strong {
+  color: #f6f8ff;
+}
+
+.detail-list span {
+  color: #cbd6f6;
+  font-size: 0.95rem;
+}

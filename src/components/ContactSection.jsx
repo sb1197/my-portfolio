@@ -1,6 +1,9 @@
+import '../styles/ContactSection.css';
+import SectionShell from './SectionShell';
+
 function ContactSection({ location, contact }) {
   return (
-    <section id="contact" className="section details-grid">
+    <SectionShell id="contact" className="section details-grid">
       <article>
         <h3>Location</h3>
         <p>{location}</p>
@@ -31,7 +34,7 @@ function ContactSection({ location, contact }) {
           </a>
         </div>
       </article>
-    </section>
+    </SectionShell>
   );
 }
 

@@ -1,0 +1,63 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-items: center;
+  height: 400px;
+}
+
+.subtitle {
+  margin: 1rem 0 0;
+  color: #cbd6f6;
+  max-width: 44rem;
+  line-height: 1.8;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-intro {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.typewriter {
+  display: inline-grid;
+  align-items: center;
+  overflow: hidden;
+  border-right: 0.15em solid #7aa5ff;
+  white-space: nowrap;
+  max-width: 100%;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+.name {
+  font-size: clamp(2.5rem, 10vw, 6rem);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7aa5ff;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

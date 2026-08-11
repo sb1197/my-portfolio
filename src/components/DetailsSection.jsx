@@ -1,4 +1,5 @@
 import SectionShell from './SectionShell';
+import '../styles/DetailsSection.css';
 
 function DetailsSection({ education, languages, hobbies }) {
   return (

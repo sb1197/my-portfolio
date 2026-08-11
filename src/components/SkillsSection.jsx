@@ -1,4 +1,5 @@
 import SectionShell from './SectionShell';
+import '../styles/SkillsSection.css';
 
 function SkillsSection({ skillGroups }) {
   return (

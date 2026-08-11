@@ -1,0 +1,22 @@
+.details-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-list li {
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(116, 177, 255, 0.16);
+  color: #dbe2ff;
+  font-size: 0.9rem;
+}

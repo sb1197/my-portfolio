@@ -34,26 +34,24 @@ const profile = {
 function App() {
   return (
     <div className="page-shell">
-      <main>
-        <NavHeader />
-        <ProfileHeader name={profile.name} role={profile.role} />
+      <NavHeader />
+      <ProfileHeader name={profile.name} role={profile.role} />
 
-        <AboutSection summary={profile.summary} imageSrc={profileImage} />
+      <AboutSection summary={profile.summary} imageSrc={profileImage} />
 
-        <ContactSection location={profile.location} contact={profile.contact} />
+      <ContactSection location={profile.location} contact={profile.contact} />
 
-        <SkillsSection skillGroups={profile.technicalSkills} />
+      <SkillsSection skillGroups={profile.technicalSkills} />
 
-        <ProjectsSection projects={profile.projects} />
+      <ProjectsSection projects={profile.projects} />
 
-        <VideoSection src="/intro.mp4" />
+      <VideoSection src="/intro.mp4" />
 
-        <DetailsSection
-          education={profile.education}
-          languages={profile.languages}
-          hobbies={profile.hobbies}
-        />
-      </main>
+      <DetailsSection
+        education={profile.education}
+        languages={profile.languages}
+        hobbies={profile.hobbies}
+      />
     </div>
   );
 }
