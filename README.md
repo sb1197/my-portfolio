@@ -46,10 +46,10 @@ npm run build
 Contributions are welcome. Before opening a PR, make sure your changes are formatted and linted — the repository includes pre-commit hooks that automatically run Prettier on staged files.
 
 - The GitHub Actions workflow `.github/workflows/ci.yml` runs on pushes and pull requests and performs:
-	- dependency install (`npm ci`),
-	- ESLint checks (`npm run lint`),
-	- Prettier checks (`npm run format:check`), and
-	- a production build (`npm run build`).
+  - dependency install (`npm ci`),
+  - ESLint checks (`npm run lint`),
+  - Prettier checks (`npm run format:check`), and
+  - a production build (`npm run build`).
 
 - To avoid CI failures, run `npm run format` and `npm run lint` locally before pushing.
 
