@@ -39,8 +39,6 @@ function App() {
 
       <AboutSection summary={profile.summary} imageSrc={profileImage} />
 
-      <ContactSection location={profile.location} contact={profile.contact} />
-
       <SkillsSection skillGroups={profile.technicalSkills} />
 
       <ProjectsSection projects={profile.projects} />
@@ -52,6 +50,8 @@ function App() {
         languages={profile.languages}
         hobbies={profile.hobbies}
       />
+
+      <ContactSection location={profile.location} contact={profile.contact} />
     </div>
   );
 }

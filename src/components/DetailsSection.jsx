@@ -4,7 +4,7 @@ import '../styles/DetailsSection.css';
 function DetailsSection({ education, languages, hobbies }) {
   return (
     <>
-      <SectionShell id="journey" title="" className="details-grid">
+      <SectionShell id="education" title="" className="details-grid">
         <article>
           <h3>Education</h3>
           <ul className="detail-list">

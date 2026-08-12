@@ -42,17 +42,17 @@
   width: 100%;
   display: grid;
   justify-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   gap: 1rem;
 }
 
 .about-title {
-    font-size: clamp(2.2rem, 10vw, 6rem);
+    font-size: clamp(2.2rem, 5vw, 6rem);
     text-align: center;
 }
 
 .about-subtitle {
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-size: clamp(1.2rem, 4vw, 0.5rem);
   text-align: center;
   color: #cbd6f6;
   width: 45%;

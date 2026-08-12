@@ -90,3 +90,7 @@ h5 {
 .light-theme .tag-list li {
   color: #334155;
 }
+
+.hidden{
+  display: none;
+}

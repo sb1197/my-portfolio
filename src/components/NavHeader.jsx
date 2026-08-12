@@ -50,16 +50,21 @@ export default function NavHeader() {
   const links = [
     ['Home', '#home'],
     ['About', '#about'],
+    ['Technical Skills', '#skills'],
     ['Projects', '#projects'],
-    ['Journey', '#journey'],
-    ['Blog', '/blog.html'],
+    ['Education', '#education'],
     ['Resume', '/resume.html'],
     ['Contact', '#contact'],
   ];
 
   return (
     <div className={`nav-header ${hidden ? 'hidden' : ''}`}>
-      <div onClick={() => setOpen(false)} />
+      <button
+        type="button"
+        className={`nav-backdrop ${open ? 'open' : 'hidden'}`}
+        onClick={() => setOpen(false)}
+        aria-label="Close navigation menu"
+      />
       <nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <img src={imageSrc} alt="logo" height={40} />

@@ -3,7 +3,7 @@ import '../styles/SkillsSection.css';
 
 function SkillsSection({ skillGroups }) {
   return (
-    <SectionShell title="Technical Skills">
+    <SectionShell id="skills" title="Technical Skills">
       <div className="skill-groups">
         {skillGroups.map((group) => (
           <article key={group.title} className="skill-group">
