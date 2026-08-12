@@ -1,7 +1,7 @@
 import SectionShell from './SectionShell';
 import '../styles/VideoSection.css';
 
-function VideoSection({ src, title = '' }) {
+function VideoSection({ src }) {
   return (
     <SectionShell id="video">
       <article>

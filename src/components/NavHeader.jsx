@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import '../styles/NavHeader.css';
 import imageSrc from '../images/logo.png';
 
