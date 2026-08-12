@@ -34,7 +34,7 @@
 
 .about-summary p {
   margin: 0;
-  font-size: larger;
+  font-size: clamp(16px, 3vw, 22px);
   line-height: 1.8;
 }
 

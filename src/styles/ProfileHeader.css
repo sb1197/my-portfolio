@@ -13,6 +13,7 @@
   line-height: 1.8;
   display: flex;
   justify-content: center;
+  font-size: clamp(1rem, 3vw, 1.5rem)
 }
 
 .hero-intro {
@@ -34,7 +35,7 @@
 }
 
 .name {
-  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-size: clamp(3rem, 10vw, 6rem);
 }
 
 @keyframes typing {

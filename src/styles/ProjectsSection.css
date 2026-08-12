@@ -16,7 +16,7 @@
   width: 100%;
   display: grid;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
   text-align: left;
   border: none;
   background: transparent;
@@ -39,6 +39,7 @@
 
 .project-info {
   margin-bottom: 0.6rem;
+  padding: 0 1rem 0;
 }
 
 .project-role,
@@ -49,14 +50,11 @@
 }
 
 .summary-list {
-  margin: 1rem 0 0;
-  padding: 0 1rem 1rem;
+  margin-top: 1rem;
   display: block;
 }
 
 .summary-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding-bottom: 0.8rem;
+  display: list-item;
+  padding: 0 1rem 1rem;
 }
