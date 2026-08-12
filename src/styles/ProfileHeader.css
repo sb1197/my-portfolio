@@ -28,7 +28,7 @@
   overflow: hidden;
   border-right: 0.15em solid #7aa5ff;
   white-space: nowrap;
-  max-width: 100%;
+  width: max-content;
   animation:
     typing 3.5s steps(40, end),
     blink-caret 0.75s step-end infinite;
@@ -43,7 +43,7 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 70%;
   }
 }
 
