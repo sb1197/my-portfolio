@@ -47,8 +47,8 @@
 }
 
 .about-title {
-    font-size: clamp(2.2rem, 5vw, 6rem);
-    text-align: center;
+  font-size: clamp(2.2rem, 5vw, 6rem);
+  text-align: center;
 }
 
 .about-subtitle {
@@ -82,7 +82,6 @@
   .about-subtitle {
     width: 100%;
   }
-
 
   .avatar {
     width: min(120px, 42vw);
