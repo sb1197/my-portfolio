@@ -17,23 +17,6 @@ function ContactSection({ location, contact }) {
           <a href={`tel:${contact.phone}`}>{contact.phone}</a>
         </p>
       </article>
-      <article>
-        <h3>Links</h3>
-        <div className="link-list">
-          <a href={contact.portfolio} target="_blank" rel="noreferrer">
-            Portfolio
-          </a>
-          <a href={contact.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href={contact.medium} target="_blank" rel="noreferrer">
-            Medium
-          </a>
-        </div>
-      </article>
     </SectionShell>
   );
 }

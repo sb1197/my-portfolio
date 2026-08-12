@@ -125,3 +125,23 @@ export const TECHNICAL_SKILLS = [
     ],
   },
 ];
+
+export const PROFILE = {
+  name: 'Shweta Bochare',
+  role: 'Senior Software Engineer at Peak - A UiPath Company',
+  location: 'Pune, Maharashtra, India',
+  summary: SUMMARY,
+  education: EDUCATION,
+  languages: LANGUAGES,
+  hobbies: HOBBIES,
+  projects: PROJECTS,
+  technicalSkills: TECHNICAL_SKILLS,
+  contact: {
+    email: 'mailto:shwetabochare11@gmail.com',
+    portfolio: 'https://my-portfolio-five-henna-98.vercel.app/',
+    phone: 'tel:+91-7350519505',
+    linkedin: 'https://www.linkedin.com/in/shweta-bochare-172283128/',
+    github: 'https://github.com/sb1197',
+    medium: 'https://medium.com/@shwetabochare11',
+  },
+};

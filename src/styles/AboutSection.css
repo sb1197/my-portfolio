@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: minmax(200px, 400px) 1fr;
   gap: 1rem;
-  align-items: center;
+  justify-items: center;
 }
 
 .about-avatar.avatar {
-  width: min(350px, 24vw);
-  height: min(350px, 24vw);
+  width: min(350px, 35vw);
+  height: min(350px, 35vw);
 }
 
 .avatar {
@@ -32,9 +32,17 @@
   display: block;
 }
 
+.about-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+
 .about-summary p {
   margin: 0;
-  font-size: clamp(16px, 3vw, 22px);
+  font-size: clamp(16px, 3vw, 20px);
   line-height: 1.8;
 }
 
