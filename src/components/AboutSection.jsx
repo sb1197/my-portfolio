@@ -1,15 +1,17 @@
-import SectionShell from './SectionShell';
 import '../styles/AboutSection.css';
+
 import ContactSvg from '../images/contact.svg';
 import LinkedInSvg from '../images/linkedin.svg';
 import GithubSvg from '../images/github.svg';
 import MailSvg from '../images/mail.svg';
 
+import SectionShell from './SectionShell';
+
 function AboutSection({ summary, imageSrc, contact }) {
   return (
     <SectionShell id="about">
       <div className="about-intro">
-        <p>--------- ABOUT ME ----------</p>
+        <p>--------- ABOUT ME ---------</p>
         <h1 className="about-title">Code Meets Technology</h1>
         <span className="about-subtitle">
           A passionate frontend developer from Pune blending creative design with 6+ years of
