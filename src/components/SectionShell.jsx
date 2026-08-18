@@ -5,7 +5,7 @@ function SectionShell({ title, titleLevel = 'h3', children, className = '', id }
 
   return (
     <section id={id} className={`section ${className}`.trim()}>
-      {title ? <Heading>{title}</Heading> : null}
+      {title ? <Heading className="section-title">{title}</Heading> : null}
       {children}
     </section>
   );

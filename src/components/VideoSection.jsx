@@ -3,9 +3,8 @@ import '../styles/VideoSection.css';
 
 function VideoSection({ src }) {
   return (
-    <SectionShell id="video">
+    <SectionShell id="video" title="Video Introduction">
       <article>
-        <h3>Video Introduction</h3>
         <div className="video-wrapper">
           <video controls playsInline style={{ width: '100%', borderRadius: 12 }}>
             <source src={src || '/intro.mp4'} type="video/mp4" />

@@ -2,3 +2,12 @@
   margin-bottom: 2rem;
   scroll-margin-top: calc(var(--nav-offset) + 8px);
 }
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

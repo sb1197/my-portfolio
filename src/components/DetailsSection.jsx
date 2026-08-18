@@ -4,9 +4,8 @@ import '../styles/DetailsSection.css';
 function DetailsSection({ education, languages, hobbies }) {
   return (
     <>
-      <SectionShell id="education" title="" className="details-grid">
-        <article>
-          <h3>Education</h3>
+      <SectionShell id="education" title="Education">
+        <div>
           <ul className="detail-list">
             {education.map((item) => (
               <li key={`${item.degree}-${item.institution}`}>
@@ -17,7 +16,7 @@ function DetailsSection({ education, languages, hobbies }) {
               </li>
             ))}
           </ul>
-        </article>
+        </div>
       </SectionShell>
       <SectionShell title="" className="details-grid">
         <article>

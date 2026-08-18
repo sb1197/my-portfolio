@@ -51,11 +51,11 @@ export default function NavHeader() {
   const links = [
     ['Home', '#home'],
     ['About', '#about'],
-    ['Technical Skills', '#skills'],
+    ['Skills and Technologies', '#skills'],
     ['Projects', '#projects'],
     ['Education', '#education'],
     ['Resume', '/resume.html'],
-    ['Contact', '#contact'],
+    ['Contact', '/contact'],
   ];
 
   return (
