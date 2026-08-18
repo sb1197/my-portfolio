@@ -49,7 +49,6 @@
 }
 
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;
@@ -67,9 +66,9 @@
 }
 
 .hero-fade-up {
-  animation: .6s cubic-bezier(.25, .46, .45, .94) both hero-fade-up;
+  animation: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both hero-fade-up;
   justify-content: center;
-  margin-bottom: calc(.25rem * 6);
+  margin-bottom: calc(0.25rem * 6);
   display: flex;
 }
 
