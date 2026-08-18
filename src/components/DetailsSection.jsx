@@ -1,7 +1,7 @@
 import SectionShell from './SectionShell';
 import '../styles/DetailsSection.css';
 
-function DetailsSection({ education, languages, hobbies }) {
+function DetailsSection({ education }) {
   return (
     <>
       <SectionShell id="education" title="Education">

@@ -1,7 +1,7 @@
 import SectionShell from './SectionShell';
 import '../styles/DetailsSection.css';
 
-function Others() {
+function Others({ languages, hobbies }) {
   return (
     <SectionShell title="" className="details-grid">
       <article>

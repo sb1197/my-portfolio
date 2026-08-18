@@ -26,11 +26,7 @@ function App() {
 
       <VideoSection src="/intro.mp4" />
 
-      <DetailsSection
-        education={profile.education}
-        languages={profile.languages}
-        hobbies={profile.hobbies}
-      />
+      <DetailsSection education={profile.education} />
 
       <ContactSection location={profile.location} contact={profile.contact} />
     </div>
