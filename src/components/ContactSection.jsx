@@ -10,8 +10,12 @@ function ContactSection({ location, contact }) {
       </article>
       <article>
         <h3>Contact</h3>
-        <p>Email: <a href={contact.email}>{contact.email.replace('mailto:', '')}</a></p>
-        <p>Phone: <a href={contact.phone}>{contact.phone.replace('tel:', '')}</a></p>
+        <p>
+          Email: <a href={contact.email}>{contact.email.replace('mailto:', '')}</a>
+        </p>
+        <p>
+          Phone: <a href={contact.phone}>{contact.phone.replace('tel:', '')}</a>
+        </p>
       </article>
     </SectionShell>
   );
