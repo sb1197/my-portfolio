@@ -23,8 +23,8 @@ function AboutSection({ summary, imageSrc, contact }) {
         <div className="about-summary">
           <p>{summary}</p>
           <div className="link-list">
-            <a href={contact.portfolio} target="_blank" rel="noreferrer">
-              <img src={ContactSvg} alt="Portfolio" />
+            <a href={contact.phone} target="_blank" rel="noreferrer">
+              <img src={ContactSvg} alt="Phone" />
             </a>
             <a href={contact.linkedin} target="_blank" rel="noreferrer">
               <img src={LinkedInSvg} alt="LinkedIn" />
@@ -37,6 +37,15 @@ function AboutSection({ summary, imageSrc, contact }) {
               />
             </a>
             <a href={contact.medium} target="_blank" rel="noreferrer">
+              <img
+                src={'https://cdn-icons-png.flaticon.com/512/3670/3670068.png'}
+                alt="Medium"
+                height="30"
+                width="30"
+                style={{ backgroundColor: '#ffffff', borderRadius: '1rem' }}
+              />
+            </a>
+            <a href={contact.email} target="_blank" rel="noreferrer">
               <img src={MailSvg} alt="Email" />
             </a>
           </div>
