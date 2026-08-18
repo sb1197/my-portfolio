@@ -1,7 +1,7 @@
-export const SUMMARY =
+const SUMMARY =
   "Frontend engineer with 6+ years of experience building responsive, high-quality web applications with JavaScript, TypeScript, React, Node.js, and Python-based web experiences. I have delivered customer-facing UI's, worked with design systems and microservice architectures, and contributed to scalable product experiences across AI-driven applications and enterprise platforms.";
 
-export const EDUCATION = [
+const EDUCATION = [
   {
     degree: 'Bachelor of Engineering',
     institution: 'Bharati Vidyapeeth College of Engineering for Women, Pune',
@@ -22,10 +22,10 @@ export const EDUCATION = [
   },
 ];
 
-export const LANGUAGES = ['English (Proficient)', 'Marathi (Native)', 'Hindi (Proficient)'];
-export const HOBBIES = ['Reading', 'Traveling', 'Listening Podcasts'];
+const LANGUAGES = ['English (Proficient)', 'Marathi (Native)', 'Hindi (Proficient)'];
+const HOBBIES = ['Reading', 'Traveling', 'Listening Podcasts'];
 
-export const PROJECTS = [
+const PROJECTS = [
   {
     name: 'Peak - A UiPath Company',
     role: 'Senior Software Engineer',
@@ -74,7 +74,7 @@ export const PROJECTS = [
   },
 ];
 
-export const TECHNICAL_SKILLS = [
+const TECHNICAL_SKILLS = [
   {
     title: 'Technology & Frameworks',
     items: [

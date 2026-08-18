@@ -1,4 +1,4 @@
-import { EDUCATION, LANGUAGES, PROJECTS, SUMMARY, TECHNICAL_SKILLS, HOBBIES, PROFILE } from './constants';
+import { PROFILE } from './constants';
 import {
   AboutSection,
   ContactSection,
