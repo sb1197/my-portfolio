@@ -1,0 +1,27 @@
+.detail-list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.detail-list div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.8rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-list strong {
+  color: #f6f8ff;
+}
+
+.detail-list span {
+  color: #cbd6f6;
+  font-size: 0.95rem;
+  margin: 0;
+}

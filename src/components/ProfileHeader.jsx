@@ -1,12 +1,21 @@
-function ProfileHeader({ name, role, imageSrc }) {
+import '../styles/ProfileHeader.css';
+
+function ProfileHeader({ name, role }) {
   return (
-    <section className="hero">
-      <div className="typewriter">
-        <h1>Hi, I&apos;m {name}.</h1>
+    <section id="home" className="hero">
+      <div className="hero-intro">
+        <div className="hero-fade-up">
+          <span className="status-indicator">
+            <span className="status-flex">
+              <span className="status-ping"></span>
+              <span className="status-circle"></span>
+            </span>
+            Open to Work · Software Engineer
+          </span>
+        </div>
+        <h2>Hi, I&apos;m </h2>
+        <h1 className="typewriter name">{name}.</h1>
         <p className="subtitle">{role}</p>
-      </div>
-      <div className="avatar" aria-hidden="true">
-        <img src={imageSrc} alt={`${name} portrait`} />
       </div>
     </section>
   );

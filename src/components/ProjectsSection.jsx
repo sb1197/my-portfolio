@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/ProjectsSection.css';
 
 import SectionShell from './SectionShell';
 
@@ -18,7 +19,7 @@ function ProjectsSection({ projects }) {
   };
 
   return (
-    <SectionShell title="Projects">
+    <SectionShell id="projects" title="Projects">
       <div className="project-list">
         {projects.map((project) => {
           const projectKey = `${project.name}-${project.period}`;
@@ -33,8 +34,8 @@ function ProjectsSection({ projects }) {
                 onClick={() => toggleProject(projectKey)}
               >
                 <div className="project-heading">
-                  <h3>{project.name}</h3>
-                  <span className="project-toggle">{isOpen ? 'Hide details' : 'Show details'}</span>
+                  <h2>{project.name}</h2>
+                  <span className="project-toggle">{isOpen ? 'Hide' : 'Show'}</span>
                 </div>
               </button>
 
@@ -57,7 +58,7 @@ function ProjectsSection({ projects }) {
                   )}
                 </div>
               )}
-              <ul className="tag-list">
+              <ul className="skill-tag-list">
                 {project.technologies.map((technology) => (
                   <li key={technology}>{technology}</li>
                 ))}

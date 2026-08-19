@@ -1,6 +1,9 @@
+import '../styles/ContactSection.css';
+import SectionShell from './SectionShell';
+
 function ContactSection({ location, contact }) {
   return (
-    <section className="section details-grid">
+    <SectionShell id="contact" className="section details-grid">
       <article>
         <h3>Location</h3>
         <p>{location}</p>
@@ -8,30 +11,13 @@ function ContactSection({ location, contact }) {
       <article>
         <h3>Contact</h3>
         <p>
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          Email: <a href={contact.email}>{contact.email.replace('mailto:', '')}</a>
         </p>
         <p>
-          <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+          Phone: <a href={contact.phone}>{contact.phone.replace('tel:', '')}</a>
         </p>
       </article>
-      <article>
-        <h3>Links</h3>
-        <div className="link-list">
-          <a href={contact.portfolio} target="_blank" rel="noreferrer">
-            Portfolio
-          </a>
-          <a href={contact.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href={contact.medium} target="_blank" rel="noreferrer">
-            Medium
-          </a>
-        </div>
-      </article>
-    </section>
+    </SectionShell>
   );
 }
 

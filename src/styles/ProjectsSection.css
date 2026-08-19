@@ -1,0 +1,60 @@
+.project-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-card {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.project-summary {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-toggle {
+  justify-self: end;
+  align-self: center;
+  color: #7aa5ff;
+  font-size: 0.95rem;
+}
+
+.project-info {
+  margin-bottom: 0.6rem;
+  padding: 0 1rem 0;
+}
+
+.project-role,
+.project-period {
+  margin: 0.1rem 0;
+  color: #7aa5ff;
+  font-size: 0.95rem;
+}
+
+.summary-list {
+  margin-top: 1rem;
+  display: block;
+}
+
+.summary-list li {
+  display: list-item;
+  padding: 0 1rem 1rem;
+}
