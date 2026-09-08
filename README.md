@@ -52,6 +52,8 @@ Contributions are welcome. Before opening a PR, make sure your changes are forma
   - a production build (`npm run build`).
 
 - To avoid CI failures, run `npm run format` and `npm run lint` locally before pushing.
+- After a pull request is merged into `main`, `.github/workflows/release.yml` bumps the patch version, creates a GitHub Release, and deploys the production build to Vercel.
+- Configure the repository secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` before enabling the release workflow. The package is private, so the release is represented by the version commit, Git tag, and GitHub Release rather than an npm registry publish.
 
 If you'd like me to add contribution guidelines, testing, or more CI checks (type checking, unit tests), open an issue or a PR and I can help add them.
 
