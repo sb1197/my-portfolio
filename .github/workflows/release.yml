@@ -48,6 +48,8 @@ jobs:
         run: "npm version patch -m 'chore: release v%s'"
 
       - name: Push version commit and tag
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: git push origin HEAD:main --follow-tags
 
       - name: Create GitHub Release
