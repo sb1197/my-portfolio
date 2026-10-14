@@ -1,5 +1,5 @@
-import SectionShell from './SectionShell';
-import '../styles/VideoSection.css';
+import SectionShell from '../SectionShell';
+import '../../styles/VideoSection.css';
 
 function VideoSection({ src }) {
   return (

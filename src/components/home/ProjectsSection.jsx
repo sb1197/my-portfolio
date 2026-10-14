@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../styles/ProjectsSection.css';
+import '../../styles/ProjectsSection.css';
 
-import SectionShell from './SectionShell';
+import SectionShell from '../SectionShell';
 
 function ProjectsSection({ projects }) {
   const [openProjects, setOpenProjects] = useState(new Set());

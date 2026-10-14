@@ -126,6 +126,16 @@ const TECHNICAL_SKILLS = [
   },
 ];
 
+export const NAV_LINKS = [
+  ['Home', '/'],
+  ['About', '/about'],
+  ['Technologies', '/#skills'],
+  ['Projects', '/projects'],
+  ['Education', '/#education'],
+  ['Resume', '/resume.html'],
+  ['Contact', '/contact'],
+];
+
 export const PROFILE = {
   name: 'Shweta Bochare',
   role: 'Senior Software Engineer at Peak - A UiPath Company',
