@@ -35,7 +35,13 @@ function AboutSection({ summary, imageSrc, contact }) {
               <img
                 src={GithubSvg}
                 alt="GitHub"
-                style={{ backgroundColor: '#ffffff', borderRadius: '1rem', width: '30px', height: '30px', alignSelf: 'center' }}
+                style={{
+                  backgroundColor: '#ffffff',
+                  borderRadius: '1rem',
+                  width: '30px',
+                  height: '30px',
+                  alignSelf: 'center',
+                }}
               />
             </a>
             <a href={contact.medium} target="_blank" rel="noreferrer">
