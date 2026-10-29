@@ -62,7 +62,7 @@
 }
 
 .nav-links li a {
-  color: var(--link-color, #74b1ff);
+  color: var(--link-color, #0b67f3);
   text-decoration: none;
   padding: 0.35rem 0.6rem;
   border-radius: 8px;

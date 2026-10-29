@@ -78,9 +78,9 @@ export default function NavHeader() {
             {NAV_LINKS.map(([label, href, icon]) => {
               const content = (
                 <>
-                  <span className="nav-icon" aria-hidden>
+                  {/* <span className="nav-icon" aria-hidden>
                     {icon}
-                  </span>
+                  </span> */}
                   <span className="nav-label">{label}</span>
                 </>
               );
