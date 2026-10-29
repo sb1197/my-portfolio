@@ -75,12 +75,9 @@ export default function NavHeader() {
           </button>
 
           <ul className={`nav-links ${open ? 'open' : ''}`}>
-            {NAV_LINKS.map(([label, href, icon]) => {
+            {NAV_LINKS.map(([label, href]) => {
               const content = (
                 <>
-                  {/* <span className="nav-icon" aria-hidden>
-                    {icon}
-                  </span> */}
                   <span className="nav-label">{label}</span>
                 </>
               );

@@ -4,7 +4,6 @@ import ContactSvg from '../../images/contact.svg';
 import LinkedInSvg from '../../images/linkedin.svg';
 import GithubSvg from '../../images/github.svg';
 import MailSvg from '../../images/mail.svg';
-
 import SectionShell from '../SectionShell';
 
 function AboutSection({ summary, imageSrc, contact }) {
