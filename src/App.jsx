@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { PROFILE } from './constants';
 import ContactForm from './components/contact/ContactForm';
+import AboutPage from './components/about/AboutPage';
+import ProjectsPage from './components/projects/ProjectsPage';
 import {
   AboutSection,
   DetailsSection,
@@ -37,8 +39,8 @@ function App() {
             </>
           }
         />
-        <Route path="/about" element={<></>} />
-        <Route path="/projects" element={<></>} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
         <Route
           path="/contact"
           element={

@@ -149,7 +149,7 @@ export const PROFILE = {
   contact: {
     email: 'mailto:shwetabochare11@gmail.com',
     portfolio: 'https://my-portfolio-five-henna-98.vercel.app/',
-    phone: 'tel:+91-7350519505',
+    phone: 'tel:+91-9372254043',
     linkedin: 'https://www.linkedin.com/in/shweta-bochare-172283128/',
     github: 'https://github.com/sb1197',
     medium: 'https://medium.com/@shwetabochare11',

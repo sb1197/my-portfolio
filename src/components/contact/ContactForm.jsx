@@ -1,7 +1,10 @@
+import { useState } from 'react';
+
 import '../../styles/ContactForm.css';
 import profileImage from '../../images/self.jpg';
 
 function ContactForm({ name, location, contact }) {
+  const [isFormValid, setIsFormValid] = useState(false);
   const emailAddress = contact.email.replace(/^mailto:/, '');
 
   function handleSubmit(event) {
@@ -26,26 +29,30 @@ function ContactForm({ name, location, contact }) {
             Have a project in mind or just want to say hello? Send me a message.
           </p>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form
+            className="contact-form"
+            onChange={(event) => setIsFormValid(event.currentTarget.checkValidity())}
+            onSubmit={handleSubmit}
+          >
             <div className="contact-form-row">
               <label>
-                Name
-                <input name="name" type="text" autoComplete="name" required />
+                Name *
+                <input name="name" type="text" autoComplete="name" placeholder="Your name" required />
               </label>
               <label>
-                Email
-                <input name="email" type="email" autoComplete="email" required />
+                Email *
+                <input name="email" type="email" autoComplete="email" placeholder="Your email" required />
               </label>
             </div>
             <label>
               Subject
-              <input name="subject" type="text" required />
+              <input name="subject" type="text" placeholder="What's this about?" />
             </label>
             <label>
-              Message
-              <textarea name="message" rows="6" required />
+              Message *
+              <textarea name="message" rows="6" placeholder="Tell me about your project..." required />
             </label>
-            <button className="contact-send-button" type="submit">
+            <button className="contact-send-button" type="submit" disabled={!isFormValid}>
               Send message <span aria-hidden="true">&#8599;</span>
             </button>
             <p className="contact-form-note">

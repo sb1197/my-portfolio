@@ -87,13 +87,19 @@
     background-color 160ms ease;
 }
 
-.contact-send-button:hover {
+.contact-send-button:hover:not(:disabled) {
   background: cornflowerblue;
   transform: translateY(-2px);
 }
 
+.contact-send-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .contact-send-button span {
   font-size: 1.15rem;
+  margin-bottom: -4px;
 }
 
 .contact-form-note {
