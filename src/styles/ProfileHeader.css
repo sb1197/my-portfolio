@@ -92,6 +92,12 @@
   background-color: color-mix(in oklab, #00bc7d 15%, transparent);
 }
 
+.light-theme .status-indicator {
+  border-color: color-mix(in oklab, #15803d 30%, transparent);
+  color: #15803d;
+  background-color: color-mix(in oklab, #15803d 15%, transparent);
+}
+
 .status-flex {
   position: relative;
   display: inline-flex;
@@ -110,6 +116,11 @@
   background-color: #00bc7d;
   opacity: 0.75;
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.light-theme .status-ping,
+.light-theme .status-circle {
+  background-color: #15803d;
 }
 
 @keyframes ping {

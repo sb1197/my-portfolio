@@ -1,5 +1,5 @@
-import SectionShell from './SectionShell';
-import '../styles/DetailsSection.css';
+import SectionShell from '../SectionShell';
+import '../../styles/DetailsSection.css';
 
 function Others({ languages, hobbies }) {
   return (

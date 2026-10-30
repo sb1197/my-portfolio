@@ -1,9 +1,9 @@
-import SectionShell from './SectionShell';
-import '../styles/SkillsSection.css';
+import SectionShell from '../SectionShell';
+import '../../styles/SkillsSection.css';
 
 function SkillsSection({ skillGroups }) {
   return (
-    <SectionShell id="skills" title="Skills and Technologies">
+    <SectionShell id="skills" title="Technologies">
       <div className="skill-groups">
         {skillGroups.map((group) => (
           <article key={group.title} className="skill-group">

@@ -1,11 +1,10 @@
-import '../styles/AboutSection.css';
+import '../../styles/AboutSection.css';
 
-import ContactSvg from '../images/contact.svg';
-import LinkedInSvg from '../images/linkedin.svg';
-import GithubSvg from '../images/github.svg';
-import MailSvg from '../images/mail.svg';
-
-import SectionShell from './SectionShell';
+import ContactSvg from '../../images/contact.svg';
+import LinkedInSvg from '../../images/linkedin.svg';
+import GithubSvg from '../../images/github.svg';
+import MailSvg from '../../images/mail.svg';
+import SectionShell from '../SectionShell';
 
 function AboutSection({ summary, imageSrc, contact }) {
   return (
@@ -35,7 +34,13 @@ function AboutSection({ summary, imageSrc, contact }) {
               <img
                 src={GithubSvg}
                 alt="GitHub"
-                style={{ backgroundColor: '#ffffff', borderRadius: '1rem' }}
+                style={{
+                  backgroundColor: '#ffffff',
+                  borderRadius: '1rem',
+                  width: '30px',
+                  height: '30px',
+                  alignSelf: 'center',
+                }}
               />
             </a>
             <a href={contact.medium} target="_blank" rel="noreferrer">

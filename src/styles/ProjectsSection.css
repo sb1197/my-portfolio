@@ -58,3 +58,13 @@
   display: list-item;
   padding: 0 1rem 1rem;
 }
+
+.light-theme .project-card {
+  background: rgba(3, 10, 30, 0.035);
+  border-color: rgba(3, 10, 30, 0.12);
+}
+
+.light-theme .skill-tag-list li {
+  background: rgba(11, 103, 243, 0.1);
+  color: #15335e;
+}
