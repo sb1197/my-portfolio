@@ -37,11 +37,23 @@ function ContactForm({ name, location, contact }) {
             <div className="contact-form-row">
               <label>
                 Name *
-                <input name="name" type="text" autoComplete="name" placeholder="Your name" required />
+                <input
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  placeholder="Your name"
+                  required
+                />
               </label>
               <label>
                 Email *
-                <input name="email" type="email" autoComplete="email" placeholder="Your email" required />
+                <input
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  placeholder="Your email"
+                  required
+                />
               </label>
             </div>
             <label>
@@ -50,7 +62,12 @@ function ContactForm({ name, location, contact }) {
             </label>
             <label>
               Message *
-              <textarea name="message" rows="6" placeholder="Tell me about your project..." required />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Tell me about your project..."
+                required
+              />
             </label>
             <button className="contact-send-button" type="submit" disabled={!isFormValid}>
               Send message <span aria-hidden="true">&#8599;</span>
