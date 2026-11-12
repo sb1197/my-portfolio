@@ -1,16 +1,18 @@
-import AboutSection from './AboutSection';
-import ContactSection from './ContactSection';
-import DetailsSection from './DetailsSection';
-import ProfileHeader from './ProfileHeader';
+import AboutSection from './home/AboutSection';
+import ContactSection from './home/ContactSection';
+import DetailsSection from './home/DetailsSection';
+import Footer from './Footer';
+import ProfileHeader from './home/ProfileHeader';
 import NavHeader from './NavHeader';
-import ProjectsSection from './ProjectsSection';
-import SkillsSection from './SkillsSection';
-import VideoSection from './VideoSection';
+import ProjectsSection from './home/ProjectsSection';
+import SkillsSection from './home/SkillsSection';
+import VideoSection from './home/VideoSection';
 
 export {
   AboutSection,
   ContactSection,
   DetailsSection,
+  Footer,
   ProfileHeader,
   NavHeader,
   ProjectsSection,

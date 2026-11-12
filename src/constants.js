@@ -126,6 +126,16 @@ const TECHNICAL_SKILLS = [
   },
 ];
 
+export const NAV_LINKS = [
+  ['Home', '/'],
+  ['About', '/about'],
+  ['Technologies', '/#skills'],
+  ['Projects', '/projects'],
+  ['Education', '/#education'],
+  ['Resume', '/resume.html'],
+  ['Contact', '/contact'],
+];
+
 export const PROFILE = {
   name: 'Shweta Bochare',
   role: 'Senior Software Engineer at Peak - A UiPath Company',
@@ -139,7 +149,7 @@ export const PROFILE = {
   contact: {
     email: 'mailto:shwetabochare11@gmail.com',
     portfolio: 'https://my-portfolio-five-henna-98.vercel.app/',
-    phone: 'tel:+91-7350519505',
+    phone: 'tel:+91-9372254043',
     linkedin: 'https://www.linkedin.com/in/shweta-bochare-172283128/',
     github: 'https://github.com/sb1197',
     medium: 'https://medium.com/@shwetabochare11',

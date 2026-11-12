@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
+import { NAV_LINKS } from '../constants';
 import '../styles/NavHeader.css';
 import imageSrc from '../images/logo.png';
 
@@ -48,16 +50,6 @@ export default function NavHeader() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const links = [
-    ['Home', '#home'],
-    ['About', '#about'],
-    ['Skills and Technologies', '#skills'],
-    ['Projects', '#projects'],
-    ['Education', '#education'],
-    ['Resume', '/resume.html'],
-    ['Contact', '/contact'],
-  ];
-
   return (
     <div className={`nav-header ${hidden ? 'hidden' : ''}`}>
       <button
@@ -83,16 +75,27 @@ export default function NavHeader() {
           </button>
 
           <ul className={`nav-links ${open ? 'open' : ''}`}>
-            {links.map(([label, href, icon]) => (
-              <li key={href}>
-                <a href={href} onClick={() => setOpen(false)}>
-                  <span className="nav-icon" aria-hidden>
-                    {icon}
-                  </span>
+            {NAV_LINKS.map(([label, href]) => {
+              const content = (
+                <>
                   <span className="nav-label">{label}</span>
-                </a>
-              </li>
-            ))}
+                </>
+              );
+
+              return (
+                <li key={href}>
+                  {href === '/resume.html' || href.includes('#') ? (
+                    <a href={href} onClick={() => setOpen(false)}>
+                      {content}
+                    </a>
+                  ) : (
+                    <Link to={href} onClick={() => setOpen(false)}>
+                      {content}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
           <button
             className="theme-toggle"

@@ -1,5 +1,5 @@
-import '../styles/ContactSection.css';
-import SectionShell from './SectionShell';
+import '../../styles/ContactSection.css';
+import SectionShell from '../SectionShell';
 
 function ContactSection({ location, contact }) {
   return (
