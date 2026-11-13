@@ -44,8 +44,37 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Bump patch version
-        run: "npm version patch -m 'chore: release v%s'"
+      - name: Bump to the next unused patch version
+        id: bump
+        run: |
+          git fetch --tags origin
+          NEXT_VERSION=$(node --input-type=module - <<'EOF'
+          import { execFileSync } from 'node:child_process';
+          import pkg from './package.json' with { type: 'json' };
+
+          const match = /^(\d+)\.(\d+)\.(\d+)$/.exec(pkg.version);
+          if (!match) {
+            throw new Error(`Expected x.y.z version, got ${pkg.version}`);
+          }
+
+          const [, major, minor, currentPatch] = match;
+          let patch = Number(currentPatch) + 1;
+
+          while (
+            execFileSync('git', ['tag', '--list', `v${major}.${minor}.${patch}`], {
+              encoding: 'utf8'
+            }).trim()
+          ) {
+            patch += 1;
+          }
+
+          process.stdout.write(`${major}.${minor}.${patch}`);
+          EOF
+          )
+
+          echo "Releasing version $NEXT_VERSION"
+          npm version "$NEXT_VERSION" -m 'chore: release v%s'
+          echo "version=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Push version commit and tag
         env:
@@ -55,7 +84,8 @@ jobs:
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "v$(node -p "require('./package.json').version")" --generate-notes
+          VERSION: ${{ steps.bump.outputs.version }}
+        run: gh release create "v$VERSION" --generate-notes
 
       - name: Link Vercel project
         run: npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
