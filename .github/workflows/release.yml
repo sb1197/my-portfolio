@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 
+# Serialize releases so two runs don't select the same next version.
 concurrency:
   group: release-main
   cancel-in-progress: false
@@ -20,11 +21,12 @@ jobs:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
     steps:
-      - name: Check out main
+      - name: Check out the merged commit
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
           fetch-depth: 0
 
       - name: Use Node.js
@@ -39,53 +41,49 @@ jobs:
       - name: Validate production build
         run: npm run check
 
-      - name: Configure Git
+      - name: Select next unused patch version
+        id: version
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          set -euo pipefail
 
-      - name: Bump to the next unused patch version
-        id: bump
-        run: |
           git fetch --tags origin
-          NEXT_VERSION=$(node --input-type=module - <<'EOF'
-          import { execFileSync } from 'node:child_process';
-          import pkg from './package.json' with { type: 'json' };
 
-          const match = /^(\d+)\.(\d+)\.(\d+)$/.exec(pkg.version);
-          if (!match) {
-            throw new Error(`Expected x.y.z version, got ${pkg.version}`);
-          }
+          CURRENT_VERSION=$(node -e \
+            "process.stdout.write(JSON.parse(require('fs').readFileSync('package.json', 'utf8')).version)")
 
-          const [, major, minor, currentPatch] = match;
-          let patch = Number(currentPatch) + 1;
+          if [[ ! "$CURRENT_VERSION" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            echo "Expected a stable x.y.z version, got: $CURRENT_VERSION" >&2
+            exit 1
+          fi
 
-          while (
-            execFileSync('git', ['tag', '--list', `v${major}.${minor}.${patch}`], {
-              encoding: 'utf8'
-            }).trim()
-          ) {
-            patch += 1;
-          }
+          MAJOR="${BASH_REMATCH[1]}"
+          MINOR="${BASH_REMATCH[2]}"
+          PATCH=$((10#${BASH_REMATCH[3]} + 1))
 
-          process.stdout.write(`${major}.${minor}.${patch}`);
-          EOF
-          )
+          while true; do
+            TAG="v${MAJOR}.${MINOR}.${PATCH}"
+            if ! git show-ref --verify --quiet "refs/tags/$TAG"; then
+              break
+            fi
+            PATCH=$((PATCH + 1))
+          done
 
-          echo "Releasing version $NEXT_VERSION"
-          npm version "$NEXT_VERSION" -m 'chore: release v%s'
-          echo "version=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Selected release tag: $TAG"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      - name: Push version commit and tag
+      - name: Create and push release tag
         env:
-          GH_TOKEN: ${{ github.token }}
-        run: git push origin HEAD:main --follow-tags
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          git tag -a "$TAG" "$GITHUB_SHA" -m "Release $TAG"
+          git push origin "refs/tags/$TAG"
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ steps.bump.outputs.version }}
-        run: gh release create "v$VERSION" --generate-notes
+          TAG: ${{ steps.version.outputs.tag }}
+        run: gh release create "$TAG" --verify-tag --generate-notes --title "$TAG"
 
       - name: Link Vercel project
         run: npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
